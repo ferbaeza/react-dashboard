@@ -1,0 +1,33 @@
+@import "../../styles/variables.scss";
+.menu{
+  background-color: $main-bg;
+
+  .menuItem{
+    .item-name{
+      color: $main-color;
+      display: flex;
+      flex-direction: column;
+      gap: $gap;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    .item{
+      color: $main-color;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: $gap;
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      border-radius: 5px;
+      text-transform: capitalize;
+
+      &:hover{
+        background-color: $soft-bg;
+      }
+    }
+  }
+}

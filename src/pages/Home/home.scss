@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.home{
+  background-color: $main-bg;
+  color: $main-color;
+
+  .boxes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $gap;
+    padding: 1%;
+    grid-auto-rows: minmax(180px, auto);
+    grid-auto-flow: dense;
+    .box{
+      padding: 5px;
+      border-radius: 5px;
+      align-items: center;
+      justify-content: center;
+      gap: $gap;
+      border: solid 1px $soft-bg;
+    }
+    .box1 {
+      grid-column: span 1;
+      grid-row: span 3;
+    }
+
+    .box4 {
+      grid-column: span 1;
+      grid-row: span 3;
+    }
+
+    .box7 {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+
+}

@@ -1,0 +1,73 @@
+@import "../../styles/variables.scss";
+.navbar{
+  background-color: $main-bg;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  gap: $gap;
+  border-bottom: solid 1px $soft-bg;
+  .logo{
+    display: flex;
+    gap: $gap;
+    align-items: center;
+    color: $main-color;
+    text-transform: capitalize;
+  }
+
+  .icons{
+    display: flex;
+    gap: $gap;
+    color: $main-color;
+    align-items: center;
+
+    .user{
+      display: flex;
+      gap: $gap;
+      align-items: center;
+      color: $main-color;
+      text-transform: capitalize;
+    }
+    .notifications{
+      // background-color: rebeccapurple;
+      gap: $gap;
+      align-items: center;
+      color: $main-color;
+      text-transform: capitalize;
+      position: relative;
+      padding: 5px;
+      .span-notification{
+        width: 20px;
+        height: 20px;
+        background-color: $red;
+        color: $main-color;
+        border-radius: 50%;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .icon{
+      width: 30px;
+      height: 30px;
+      color: $main-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      border-radius: 5px;
+      &:hover{
+        background-color: $soft-bg;
+      }
+    }
+  }
+}

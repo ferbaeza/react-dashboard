@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-color: $main-bg;
+  color: $main-color;
+  border: solid 1px $soft-bg;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: auto;
+  margin: auto;
+
+  .login-text{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-bottom: 20px;
+  }
+  .footer-text{
+    font-weight: lighter;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5%;
+    margin-bottom: 20px;
+  }
+  input{
+    width: 80%;
+    height: 30px;
+    border: solid 1px $soft-bg;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+  }
+  button{
+    width: 80%;
+    height: 30px;
+    border: solid 1px $soft-bg;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    background-color: $dark-bg;
+    color: $main-color;
+  }
+  button:hover{
+    background-color: $soft-bg;
+  }
+}
+
+

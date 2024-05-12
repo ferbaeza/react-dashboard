@@ -1,0 +1,58 @@
+@import '../../styles/variables.scss';
+
+.TablasBox {
+  background-color: $main-bg;
+  color: $main-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  width: 100%;
+
+  .total {
+    margin-bottom: 15px;
+    display: flex;
+    align-self: start;
+    gap: $gap;
+    font-weight: bold;
+  }
+  .tablas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 2%;
+    gap: $gap;
+    width: 100%;
+  }
+
+  .tabla-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $gap;
+    .tab-name {
+      width: 100%;
+      margin-bottom: 2%;
+      margin-top: 3%;
+      font-size: 1rem;
+      border-bottom: solid 0.5px $soft-color;
+      text-transform: capitalize;
+    }
+    .tab-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      .tabla-datos {
+        font-size: smaller;
+      }
+    }
+  }
+}
