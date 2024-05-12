@@ -8,28 +8,35 @@ import {
 } from "recharts";
 
 
-type ChartBoxProps = {
+type LineChartBoxProps = {
   color: string;
   icon: string;
   title: string;
-  totalUsers: number | string;
+  total: number;
   porcentaje: number;
   charData: object[];
 };
 
-function ChartBox(props: ChartBoxProps) {
+function LineChartBox(props: LineChartBoxProps) {
   return (
     <div className="ChartBox">
       <div className="boxInfo">
         <div className="chart-title">
-          <img src="icons/user.svg" alt="" className="icons" />
-          <span>Total Users</span>
+          <img src={props.icon} alt="" className="icon" />
+          <span>
+            Total
+            <span style={{ color: props.color }}>
+              {" "}
+              {props.title.charAt(0).toUpperCase() + props.title.slice(1)}{" "}
+            </span>
+          </span>
         </div>
-        <span className="chart-title-span">{props.title}</span>
-        <h2>Total: {props.totalUsers}</h2>
-        <Link to="/usuarios" className="link">
-          View Details
-        </Link>
+        <div className="chartboxTotal">
+          <h2>Total: {props.total}</h2>
+          <Link to="/usuarios" className="link">
+            View Details
+          </Link>
+        </div>
       </div>
       <div className="chartInfo">
         <div className="chart">
@@ -43,12 +50,12 @@ function ChartBox(props: ChartBoxProps) {
                 labelStyle={{
                   display: "none",
                 }}
-                position={{ x: 0, y: 0 }}
+                position={{ x: -10, y: 100 }}
               />
               <Line
                 type="monotone"
-                dataKey="pv"
-                stroke="#8884d8"
+                dataKey="number"
+                stroke={props.color}
                 strokeWidth={2}
                 dot={false}
               />
@@ -60,7 +67,7 @@ function ChartBox(props: ChartBoxProps) {
             className="porcentaje"
             style={{ color: props.porcentaje > 50 ? "limegreen" : "tomato" }}
           >
-            {props.percentaje}
+            {props.porcentaje} %
           </span>
           <span className="duracion">30 dias</span>
         </div>
@@ -69,4 +76,4 @@ function ChartBox(props: ChartBoxProps) {
   );
 }
 
-export default ChartBox;
+export default LineChartBox;

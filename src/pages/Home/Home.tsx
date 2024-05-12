@@ -1,9 +1,15 @@
-import ChartBox from '../../components/ChartBox/ChartBox';
+import ChartBox from '../../components/ChartBox/LineChart/LineChartBox';
 import TablasBox from '../../components/TablasBox/TablasBox';
 import UserBox from '../../components/UsersBox/UserBox';
 import './home.scss'
 
-import { userCharData } from './data/users.charData';
+import { userCharData } from '../../components/ChartBox/LineChart/data/users.charData';
+import { tablasCharData } from '../../components/ChartBox/LineChart/data/tablas.charData';
+import { logsCharData } from '../../components/ChartBox/LineChart/data/logs.charData';
+import { fallosCharData } from '../../components/ChartBox/LineChart/data/fallos.charData';
+import BarChartBox from '../../components/ChartBox/BarChart/BarChartBox';
+import { barchartboxData } from '../../components/ChartBox/BarChart/data/barchartboxData';
+import AreaChartBox from '../../components/ChartBox/AreaChart/AreaChartBox';
 
 function Home() {
   return (
@@ -16,20 +22,26 @@ function Home() {
           <ChartBox {...userCharData} />
         </div>
         <div className="box box3">
-          <ChartBox {...userCharData} />
+          <ChartBox {...tablasCharData} />
         </div>
         <div className="box box4">
           <TablasBox />
         </div>
         <div className="box box5">
-          <ChartBox {...userCharData} />
+          <ChartBox {...fallosCharData} />
         </div>
         <div className="box box6">
-          <ChartBox {...userCharData} />
+          <ChartBox {...logsCharData} />
         </div>
-        <div className="box box7">box-7</div>
-        <div className="box box8">box-8</div>
-        <div className="box box9">box-9</div>
+        <div className="box box7">
+          <BarChartBox {...barchartboxData} />
+        </div>
+        <div className="box box8">
+          <AreaChartBox {...barchartboxData} />
+        </div>
+        <div className="box box9">
+          <AreaChartBox {...barchartboxData} />
+        </div>
       </div>
     </div>
   );

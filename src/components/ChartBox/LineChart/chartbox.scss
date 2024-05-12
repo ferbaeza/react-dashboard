@@ -1,0 +1,59 @@
+@import '../../../styles/variables.scss';
+
+.ChartBox {
+  display: flex;
+  height: 100%;
+
+  .boxInfo{
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    text-align: left;
+    padding: 2%;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+    .chart-title{
+      display: flex;
+      text-align: left;
+      align-items: center;
+
+    }
+    .chartboxTotal{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: $gap;
+    }
+  }
+
+  .chartInfo{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    .chart{
+      width: 100%;
+      height: 100%;
+    }
+
+    .chartTextos{
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+
+      .porcentaje{
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .duracion{
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
